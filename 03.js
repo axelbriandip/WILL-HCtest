@@ -25,8 +25,6 @@ function buscarAmigo(amigos, nombre) {
   return amigo;
 }
 
-// var amigos = [{ nombre: 'toni', edad: 33 } , { nombre: 'Emi', edad: 25 }];
-// console.log(amigos[0].nombre)
 // No modifiques nada debajo de esta linea //
 
 module.exports = buscarAmigo
