@@ -73,42 +73,59 @@ function crearClasePersona() {
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
+      var sumaEdad = 0;
+      var cantidadAmigos = 0;
+      for (let i = 0; i < this.amigos.length; i++) {
+        cantidadAmigos++;
+        sumaEdad = sumaEdad + this.amigos[i].edad;
+      }
+      var prom = sumaEdad / cantidadAmigos;
+      return prom;
     }
   };
 
   return Persona;
 }
 
-class Persona {
-  constructor(nombre, edad, hobbies, amigos) {
-    this.nombre = nombre;
-    this.edad = edad;
-    this.hobbies = hobbies;
-    this.amigos = amigos;
-  }
+// class Persona {
+//   constructor(nombre, edad, hobbies, amigos) {
+//     this.nombre = nombre;
+//     this.edad = edad;
+//     this.hobbies = hobbies;
+//     this.amigos = amigos;
+//   }
 
-  addFriend(nombre, edad) {
-    this.amigos.push({ nombre, edad })
-  }
+//   addFriend(nombre, edad) {
+//     this.amigos.push({ nombre, edad })
+//   }
 
-  addHobby(hobby) {
-    this.hobbies.push(hobby)
-  }
-  getFriends() {
-    var friends = [];
-    for (let i = 0; i < this.amigos.length; i++) {
-      friends.push(this.amigos[i].nombre)
-    }
-    return friends;
-  }
-  getHobbies() {
-    return this.hobbies;
-  }
-}
+//   addHobby(hobby) {
+//     this.hobbies.push(hobby)
+//   }
+//   getFriends() {
+//     var friends = [];
+//     for (let i = 0; i < this.amigos.length; i++) {
+//       friends.push(this.amigos[i].nombre)
+//     }
+//     return friends;
+//   }
+//   getHobbies() {
+//     return this.hobbies;
+//   }
+//   getPromedioEdad() {
+//     var sumaEdad = 0;
+//     var cantidadAmigos = 0;
+//     for (let i = 0; i < yo.amigos.length; i++) {
+//       cantidadAmigos++;
+//       sumaEdad = sumaEdad + yo.amigos[i].edad;
+//     }
+//     var prom = sumaEdad / cantidadAmigos;
+//     return prom;
+//   }
+// }
 
-var yo = new Persona("Brian", 29, ["Futbol", "Tenis"], [{nombre:"Mauri", edad:25}, {nombre:"Daiana", edad:13}]);
-console.log(yo.getHobbies());
-
+// var yo = new Persona("Brian", 29, ["Futbol", "Tenis"], [{nombre:"Mauri", edad:25}, {nombre:"Daiana", edad:13}]);
+// console.log(yo.getPromedioEdad());
 
 // No modifiques nada debajo de esta linea //
 
